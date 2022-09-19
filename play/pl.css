@@ -1,0 +1,235 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #607d8b;
+}
+
+.boxes{
+    position: relative;
+    margin: auto;
+    padding: auto;
+    z-index: -1;
+}
+
+.box{
+    position: absolute;
+    top: calc(300% - 1px);
+    left: calc(50% - 110px);
+    transform: perspective(1000px)rotateY(-45deg);
+    width: 300px;
+    height: 300px;
+    transform-style: preserve-3d;
+}
+
+.box div{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    animation: animate 1s linear infinite;
+}
+
+.box div span{
+    position: absolute;
+    font-size: 30px;
+    text-align: center;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, #f1f1f1,#bbb,#f1f1f1);
+    border-radius: 20px;
+    transform: rotate(2deg);
+}
+
+.box div span:nth-child(1){
+    transform: rotateX(0deg);
+}
+.box div span:nth-child(2){
+    transform: rotateX(45deg);
+}
+.box div span:nth-child(3){
+    transform: rotateX(-45deg);
+}
+.box div span:nth-child(4){
+    transform: rotateX(90deg);
+}
+.box2{
+    position: relative;
+    top: calc(50% - 150px);
+    left: calc(10% - 100px);
+    transform: perspective(600px)rotateY(45deg);
+    width: 100px;
+    height: 30px;
+    transform-style: initial;
+}
+
+.box2 div{
+    top: 0;
+    left: 0;
+    margin-top: 1.4rem;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    animation: animate 1s linear infinite;
+}
+
+.box2 div span{
+    position: absolute;
+    font-size: 30px;
+    text-align: center;
+    top: 0;
+    left: 0;
+    margin-top: 10px;
+    padding-top: 2px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, #7dd420,#bbb,#12c19e);
+    border-radius: 20px;
+    transform: rotate(2deg);
+}
+
+.box2 div span:nth-child(1){
+    transform: rotateX(0deg);
+}
+.box2 div span:nth-child(2){
+    transform: rotateX(45deg);
+}
+.box2 div span:nth-child(3){
+    transform: rotateX(-45deg);
+}
+.box2 div span:nth-child(4){
+    transform: rotateX(90deg);
+}
+
+.box3{
+    position: relative;
+    top: calc(50% - 150px);
+    left: calc(98% - 100px);
+    bottom: 30px;
+    transform: perspective(600px)rotateY(45deg);
+    width: 100px;
+    height: 30px;
+    transform-style: initial;
+}
+
+.box3 div{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    animation: animate 1s linear infinite;
+}
+
+.box3 div span{
+    position: absolute;
+    font-size: 30px;
+    text-align: center;
+    top: 0;
+    left: 0;
+    margin-top: 10px;
+    padding-top: 2px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg,  #7dd420,#bbb,#12c19e);
+    border-radius: 20px;
+    transform: rotate(2deg);
+}
+
+.box3 div span:nth-child(1){
+    transform: rotateX(0deg);
+}
+.box3 div span:nth-child(2){
+    transform: rotateX(45deg);
+}
+.box3 div span:nth-child(3){
+    transform: rotateX(-45deg);
+}
+.box div span:nth-child(4){
+    transform: rotateX(90deg);
+}
+
+
+@keyframes animate{
+    0%{
+        transform: perspective(1000px) rotateX(0deg);
+    }
+    100%{
+        transform: perspective(1000px) rotateX(359deg);
+    }
+}
+
+
+.header{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.navbar{
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    justify-content: space-between;
+}
+
+.logo{
+    font-size: large;
+    font-weight: 900;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    /* margin-left: 6.9rem; */
+    letter-spacing: 1;
+    color: #12c19e;
+}
+.logo h1{
+    padding: 1px 0 0 3em;
+}
+
+.logo span{
+    color: #7dd420;
+    font-size: 24px;
+    font-style: italic;
+}
+
+.list ul{
+    margin: 0;
+    padding: 0;
+    margin-left: 6rem;
+}
+
+.list ul li{
+    list-style: none;
+    position: relative;
+    padding: 0 20px;
+    /* background-color: blueviolet; */
+    display: inline-block;
+    margin-top: 2rem;
+}
+
+.list ul li a{
+    display: block;
+    padding: 15px 0;
+    text-decoration: none;
+    color: #bbb;
+    font-size: 20px;
+    line-height: 2px;
+}
+
+.list ul li a:hover{
+background-color: #12c19e;
+color: #1e1e1e;
+}
+
+.list ul ul{
+    position: absolute;
+    top: 2em;
+    display: none;
+}

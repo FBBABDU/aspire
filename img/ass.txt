@@ -1,0 +1,27 @@
+<div class="border">
+        <div><img src="img/people1.jpg" alt=""></div>
+        <div class="class">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis iusto nulla, velit modi odit natus alias cupiditate hic quisquam ratione accusantium?</p>
+            <span>Abdullahi Mufti.</span>
+        </div>
+    </div>
+
+
+    .border{
+    width: 20%;
+    height: auto;
+    border: .1px solid ;
+    box-shadow: .2rem .1rem gray;
+    margin-left: 2rem;
+    padding: 2em;
+    margin-bottom: 4rem;
+}
+
+.border img{
+    width: 20%;
+    height: auto;
+    position: relative;
+    top: 0;
+    border-radius: 70%;
+    float: left;
+}
