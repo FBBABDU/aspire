@@ -165,9 +165,9 @@ body{
 }
 
 
-.header{
-    margin: 0;
-    padding: 0;
+.container{
+    margin: 20px;
+    padding: 30px;
     box-sizing: border-box;
     font-family: sans-serif;
 }
@@ -177,6 +177,7 @@ body{
     position: absolute;
     top: 0;
     left: 0;
+    margin-left: 10px;
     justify-content: space-between;
 }
 
@@ -199,37 +200,153 @@ body{
     font-style: italic;
 }
 
-.list ul{
+ul{
     margin: 0;
     padding: 0;
+    float: right;
     margin-left: 6rem;
 }
 
-.list ul li{
+ul li{
     list-style: none;
     position: relative;
-    padding: 0 20px;
+    padding: 0 40px;
     /* background-color: blueviolet; */
     display: inline-block;
     margin-top: 2rem;
 }
 
-.list ul li a{
+ul li a{
     display: block;
-    padding: 15px 0;
+    padding: 15px 4px;
     text-decoration: none;
     color: #bbb;
     font-size: 20px;
     line-height: 2px;
 }
 
-.list ul li a:hover{
+ul li a:hover{
 background-color: #12c19e;
 color: #1e1e1e;
 }
 
-.list ul ul{
+ul ul{
     position: absolute;
-    top: 2em;
+    top: 1em;
+    left: 0;
     display: none;
+}
+
+ul li:hover > ul{
+    display: block;
+    line-height: 2;
+    font-size: 16px;
+}
+
+ul ul li a{
+    width: 140px;
+    font-size: 16px;
+    padding-inline: 4px;
+    position: absolute;
+    left: 0;
+    right: 8rem;
+}
+
+ul ul li a:hover{
+    background-color: #bbb;
+}
+
+.home{
+    margin-top: 6em;
+}
+
+.jumbo{
+    display: flex;
+    gap: 8rem;
+}
+.left{
+    width: 35%;
+    line-height: 2;
+    position: relative;
+    bottom: 20px;
+    font-family: sans-serif;
+}
+
+.left h1{
+    font-size: 25px;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+.left> p{
+    color: #bbb;
+}
+.left #as{
+    color: #1e1e1e;
+    padding: 18px 10px;
+    border-radius: 20px;
+    background-color: #12c19e !important;
+    margin-right: 18px;
+    border: none;
+}
+.left #as:hover{
+    background-color: transparent !important;
+}
+.left a:hover{
+    background-color: transparent;
+}
+
+.left a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    color: #1e1e1e;
+    padding: 18px 10px;
+    border-radius: 20px;
+    background-color: #7dd420;
+}
+
+.right{
+    position: absolute;
+    right: 0;
+    padding: .7rem 0;
+    font-size: 30px;
+    word-spacing: 10px;
+    font-weight: bolder;
+    width: 32%;
+    height: 40vh;
+}
+.ani{
+    width: 6%;
+    height: 6%;
+    animation: rotat 7s ease-in .7s forwards;
+    /* animation-fill-mode: backwards; */
+    animation-iteration-count: infinite;
+    animation-direction: initial;
+    /* transform: perspective(1000px) rotateZ(-30deg); */
+}
+.right:hover .ani{
+    animation-play-state: paused;
+}
+
+@keyframes rotat{
+    0%{
+        transform: translateX(0);
+        color: #bbb;
+        opacity: 0%;
+    }
+    33%{
+        transform: translateY(1000%);
+        color: #12c19e;
+        opacity: 30%;
+    }
+    66%{
+        transform: translateX(1000%) translateY(1000%);
+        color: #7dd420;
+        opacity: 70%;
+    }
+    100%{
+        transform: translateX(1000%);
+        opacity: 100%;
+    }
 }

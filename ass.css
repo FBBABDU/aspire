@@ -16,16 +16,31 @@ header{
     box-shadow: 0.5rem .5rem rgba(0, 0, 0, .1);
 }
 
+header #toggler{
+    display: none;
+}
+
+header .fa-bars{
+    padding: 4px;
+    margin: 2px;
+    font-size: 25px;
+    border: .7px solid;
+    cursor: pointer;
+    display: none;
+}
+.na_logo{
+    display: flex;
+
+}
+
 header img{
     width: min(10% 30rem);
     padding-left: 45px;
-    position: absolute;
 }
 
 header h1{
     font-size: 1.5rem;
     position: relative;
-    left: 8.2rem;
     letter-spacing: 2px;
 }
 
@@ -66,17 +81,29 @@ header h1{
 .ri .fa-search{
     color: darkgreen;
     font-size: 26px;
-    margin-right: 4em;
+    margin-right: 1em;
     /* justify-items: center ; */
+}
+
+.ri #search{
+    font-size: medium;
+    width: 34%;
+    padding-right: 20px;
+    position: relative;
+    outline: none;
+    right: 1em;
+}
+.ri #search:hover{
+    outline: none;
 }
 
 .ri button{
     background-color: transparent;
-    border-radius: 6px;
-    padding: 4px 10px;
-    font-size: 15px;
+    border-radius: 20px;
+    padding: 4px 15px;
+    font-size: 17px;
     cursor: pointer;
-    margin-inline: 10px;
+    margin-inline: 5px;
     position: relative;
 }
 
@@ -92,7 +119,7 @@ header h1{
     padding: 0;
     top: 0; bottom: 0;
     left: 0; right: 0;
-    border-radius: 6px;
+    border-radius: 20px;
     position: absolute;
     z-index: -1;
     transition: .3s ease;
@@ -110,7 +137,7 @@ header h1{
 
 .home h1{
     font-size: 40px;
-    max-width: 85rem;
+    /* max-width: 85rem; */
     font-weight: 800;
     font-family: serif;
     text-transform: uppercase;
@@ -133,8 +160,10 @@ header h1{
     margin: 20px;
     padding: 7px 17px;
     background: transparent;
+    font-size: 20px;
+    font-weight: 900;
     border: .2px solid;
-    border-radius: 20%;
+    border-radius: 20px;
     cursor: pointer;
 }
 
@@ -156,7 +185,7 @@ header h1{
     padding: 1px 0;
     top: 0; bottom: 0;
     left: 0; right: 0;
-    border-radius: 20%;
+    border-radius: 20px;
     z-index: -1;
     transition: .3s;
 }
@@ -178,7 +207,7 @@ header h1{
     position: absolute;
     top: 0;
     left: 0;
-    border-radius: 20%;
+    border-radius: 20px;
     padding: 1px 0;
     z-index: -1;
     transition: .3s;
@@ -271,6 +300,12 @@ header h1{
     margin-inline: 40px;
 }
 
+.first-ani{
+    width: 5%;
+    height: 5%;
+    background: darkgreen;
+}
+
 .split{
     display: flex;
     width: min (80% 100%);
@@ -278,11 +313,31 @@ header h1{
 }
 
 .split h2{
+    position: relative;
+    right: 10px;
+    padding: 3rem 0;
+    margin-top: 4rem;
+    /* width: min(80% 50rem); */
+    min-width: 70%;
+    text-align: center;
+}
+
+/* .split h2.zero{
+    position: relative;
+    right: 19px;
     padding: 3rem 0;
     margin-top: 4rem;
     width: min(80% 50rem);
     text-align: center;
 }
+.split h2.one{
+    position: relative;
+    right: 12px;
+    padding: 3rem 0;
+    margin-top: 4rem;
+    width: min(80% 50rem);
+    text-align: center;
+} */
 
 .split p{
     min-width: 70%;
@@ -296,6 +351,7 @@ header h1{
     padding: 4px 8px;
     border: .3px solid;
     float: left;
+    border-radius: 20px;
     position: relative;
     z-index: 1;
 
@@ -311,6 +367,7 @@ header h1{
     background-color: #fff;
     position: absolute;
     padding: 0;
+    border-radius: 20px;
     top: 0;
     right: 0;
     left: 0;
@@ -341,7 +398,8 @@ header h1{
     display: flex;
     width: 100%;
     margin-top: 2rem;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 20px;
 }
 
 .all{
@@ -410,18 +468,22 @@ header h1{
     border: none;
     background-color: #fff;
     cursor: pointer;
+    border-radius: 20px;
 }
 
 .button{
     text-align: center;
+    width: min(85% 55rem);
     margin: 20px;
+    background-color: #1e1e1e;
+    padding: 20px;
 }
 
 .button button{
-    padding: 10px;
+    padding: 15px;
     background-color: darkgreen;
-    border-radius: 10px;
-    font-size: 15px;
+    border-radius: 20px;
+    font-size: 25px;
     color: #fff;
     text-transform: uppercase;
     border: none;
@@ -447,7 +509,7 @@ header h1{
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 23%;
-    padding: 30px;
+    padding: 10px;
     gap: 20px;
     overflow-x: auto;
     overscroll-behavior-inline: contain;
@@ -456,15 +518,16 @@ header h1{
 .border{
     display: grid;
     grid-template-rows: min-content;
-    gap: 10px;
-    padding: 3px;
+    gap: 0px;
+    padding: 30px;
     background-color: rgb(145, 155, 165);
     border-radius: 10px;
 }
 
 .border img{
-    width: 26%;
-    border-radius: 65%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
     float: left;
 }
 
@@ -477,7 +540,7 @@ header h1{
 .cla span{
     font-family: courier;
     font-weight: 900;
-    padding-left: 20px;
+    padding-left: 11px;
 }
 
 
@@ -527,6 +590,7 @@ header h1{
     display: flex;
     flex-direction: row;
     margin-left: 9rem;
+    justify-content: space-between;
 }
 
 .splt h3{
@@ -539,16 +603,17 @@ header h1{
 }
 
 .splt p{
-    /* position: relative; */
+    position: relative;
     line-height: 2;
     font-size: medium;
+    right: 12px;
     font-weight: 500;
 }
 
 .splt button{
     position: relative;
-    border-radius: 10px;
-    padding: 7px 12px;
+    border-radius: 20px;
+    padding: 8px 12px;
     background-color: darkgreen;
     cursor: pointer;
     z-index: 1;
@@ -562,10 +627,10 @@ header h1{
     height: 100%;
     background-color: #fff;
     position: absolute;
-    border-radius: 10px;
-    top: 0; 
+    border-radius: 20px;
+    top: 0; bottom: 0;
     left: 0; 
-    padding: 1px 0;
+    padding: 2px 0;
     transition: .3s ease;
     z-index: -1;
 }
@@ -617,9 +682,11 @@ header h1{
     background-color: darkgreen;
     color: #fff;
     border: .5px solid;
+    border-radius: 20px;
+    cursor: pointer;
 }
 .b_d button:hover{
-    color: #1e1e1e;
+    color: #fff;
     border: none;
     background-color: transparent;
 }
@@ -659,6 +726,9 @@ header h1{
 .na button{
     background-color: darkgreen;
     color: #fff;
+    border-radius: 20px;
+    border: .1px;
+    cursor: pointer;
 }
 .grid{
     display: flex;
@@ -714,6 +784,7 @@ header h1{
 }
 .li_1 ul li{
     list-style: none;
+    line-height: 2;
     text-decoration: none;
 }
 .li_1 ul li a{
@@ -725,6 +796,7 @@ header h1{
     float: right;
     position: relative;
     bottom: 1.7rem;
+    border-radius: 20px;
 }
 
 .ftbtn #message{
@@ -747,93 +819,18 @@ header h1{
     text-transform: uppercase;
     cursor: pointer;
 }
-
-
-@media (max-width: 720px){
-    header{
-        font-size: 50px;
-    }
-
-    header img{
-        position: relative;
-        width: 13%;
-        margin-left: 10px;
-    }
-
-    header h1{
-        position: absolute;
-        font-size: 14px;
-        padding-inline: 10px;
-    }
-
-    .nav{
-        position: absolute ;
-    }
-
-    .nav ul li a{
-        font-size: 12px;
-        
-   }
-
-   .home .sc,
-   .home .fc{
-    padding: 20px;
-   }
-
-   .font img{
-    width: 70%;
-    height: 48vh;
-   }
-   .logos #g{
+.down .fa-level-up{
+    font-size: larger;
+    float: right;
+    color: darkgreen;
+    cursor: pointer;
     position: relative;
-    bottom: -1px;
-   }
-   .split{
-    width: auto;
-    height: 80vh;
-    
-   }
-   .split h2{
-    margin-top: 0;
-    padding: 0;
-    font-size: 20px;
-   }
-   .split p{
-    text-align: start;
-    font-size: 14px;
-    width: 70%;
-    padding-inline: 1em;
-   }
+    left: 19rem;
+    bottom: 1.8rem;
+}
+.down .fa-level-up:hover{
+    color: #1e1e1e;
+}
 
-   .split img{
-    margin-top: 1rem;
-    width: 20rem;
-   }
-
-   .all img{
-    width: 100%;
-   }
-
-   .all h4, span{
-    width: 100%;
-    text-align: start;
-   }
-
-   .items img{
-    width: 15rem;
-    margin-left: 10px;
-   }
-   .button button{
-    font-size: 10px;
-   }
-   .splt{
-    margin-left: 1rem;
-   }
-   .splt img{
-    margin-left: 2em;
-    padding-top: 3rem;
-   }
-   .about{
-    display: block;
-   }
+@media (max-width: px){
 }
